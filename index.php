@@ -45,12 +45,14 @@
 
     var_dump($numbers);
 
-    $time = microtime(true);
+    $timeStart = microtime(true);
     $number = new numbers;
     echo "<hr>".'Max number: '.$number->maxN($numbers);
     echo "<hr>".'Min number: '.$number->minN($numbers);
     echo "<hr>".'Average value: '.$number->averageN($numbers);
-    echo "<hr>"."Time: $time";
+    $timeEnd = microtime(true);
+    $time = $timeEnd - $timeStart;
+    echo "<hr>"."Time: $time sec.";
 
     
     
