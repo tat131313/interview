@@ -5,7 +5,6 @@
             fwrite($txt, "$rand, ");
         }
     fclose($txt);*/
-
     
    $numbers = explode(", ", file_get_contents("numbers.txt"));     //read file and string->array
     
