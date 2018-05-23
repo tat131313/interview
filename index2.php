@@ -29,12 +29,13 @@
     }
     $averageN = $averageN / count($numbers);
     
+    $timeStart = microtime(true);
     var_dump($numbers);
     echo "<hr>".'Max number: '.$maxN;
     echo "<hr>".'Min number: '.$minN;
     echo "<hr>".'Average value: '.$averageN;
-    
-    $time = microtime(true);
-    echo "<hr>"."Time: $time";
+    $timeEnd = microtime(true);
+    $time = $timeEnd - $timeStart;
+    echo "<hr>"."Time: $time sec.";
 
 ?>
